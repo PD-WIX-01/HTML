@@ -1,0 +1,314 @@
+<!doctype html>
+<!--  -->
+<!--
+    -->
+<html ng-app="shoutoutGetSubscriberApp">
+  <head>
+    <script>
+      window.parsedQuery = {};
+      function parseQuery() {
+        var search = window.location.search.split('?');
+
+        if (search.length > 1) {
+          search[1].split('&').map(function (item) {
+            var queryItem = item.split('=');
+            if (queryItem.length > 0) {
+              window.parsedQuery[queryItem[0]] = queryItem[1];
+            }
+          });
+        }
+      }
+      parseQuery();
+      try {
+        (new Image()).src = '//frog.wix.com/shout?_='+ Date.now() +'&src=36&msid=c99a7287-9b4a-4927-9f00-784cb9fae79a&ownerId=a586397a-5ca6-4f70-8a5d-18624f190695&evid=302&vsi=' + window.parsedQuery.vsi;
+      } catch (e){}
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Subscribe</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="origin">
+    <link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+    <link rel="stylesheet" href="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/font-awesome/css/font-awesome.css">
+
+    <!--  -->
+<link rel="stylesheet" href="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/styles/main.css">
+<!--  -->
+
+    <style wix-style type="text/css" ng-non-bindable>
+      .app-container,
+      .upgrade-app-container {
+        background-color: {{style.backgroundColor color-1}};
+        border-width: {{style.bordersSlider}}px;
+        border-color: {{style.bordersColor color-4}};
+      }
+
+      .app-container.classic,
+      .app-container.strip {
+        border-radius: {{style.cornersSlider}}px;
+      }
+
+      .classic .header-block {
+        background-color: {{style.titleBackgroundColor color-2}};
+        border-top-left-radius: {{style.cornersSlider}}px;
+        border-top-right-radius: {{style.cornersSlider}}px;
+      }
+
+      .app-container.elegant,
+      .upgrade-app-container {
+        background-color: {{style.backgroundColor color-1}};
+        border-bottom-left-radius: {{style.cornersSlider}}px;
+        border-bottom-right-radius: {{style.cornersSlider}}px;
+      }
+
+      .app-container.headline,
+      .upgrade-app-container {
+        background-color: {{style.backgroundColor color-1}};
+        border-bottom-left-radius: {{style.cornersSlider}}px;
+        border-bottom-right-radius: {{style.cornersSlider}}px;
+        border-width: {{style.bordersSlider}}px;
+        border-color: {{style.bordersColor color-4}};
+      }
+
+      .name-label,
+      .country-code,
+      .phone-number-label,
+      .email-label,
+      .field-description-label {
+        color: {{style.labelTextColor}};
+        {{style.labelFont Body-M}};
+      }
+
+      .name-block,
+      .prefix-block,
+      .email-block,
+      .phone-input-block {
+        border-width: {{style.linesSlider}}px;
+        border-color: {{style.linesColor color-4}};
+        background-color: {{style.FieldBackgroundColor color-2}};
+        color: {{style.fieldTextColor color-10}};
+        {{style.textFont Body-M}};
+      }
+
+      .postcard .email-block,
+      .postcard .name-block {
+        border-width: {{style.linesSlider}}px;
+        border-color: {{style.linesColor color-4}};
+      }
+
+      .postcard.app-container::before {
+        background-color: {{style.backgroundColor color-1}};
+      }
+
+      .prefix-block {
+        {{style.textFont Body-M}};
+      }
+      .prefix {
+        {{style.textFont Body-M}};
+        color: {{style.fieldTextColor color-10}};
+        background-color: {{style.FieldBackgroundColor color-2}};
+      }
+
+      .select-icon {
+        font-size: inherit;
+        color: {{style.fieldTextColor color-10}};
+      }
+
+      .user-icon,
+      .phone-icon,
+      .email-icon {
+        font-size: inherit;
+        color: {{style.iconTextColor color-4}};
+      }
+
+      input::-ms-clear,
+      input::-ms-reveal {
+        display: none;
+      }
+
+      .name-input,
+      .phone-number-input,
+      .email-input[type=email] {
+        color: {{style.fieldTextColor color-10}};
+        {{style.textFont Body-M}};
+      }
+
+      .name-input::-webkit-input-placeholder,
+      .phone-number-input::-webkit-input-placeholder,
+      .email-input[type=email]::-webkit-input-placeholder {
+        color: {{style.fieldTextColor color-10}};
+        {{style.textFont Body-M}};
+      }
+
+      .name-input:-ms-input-placeholder,
+      .phone-number-input:-ms-input-placeholder,
+      .email-input[type=email]:-ms-input-placeholder {
+        color: {{style.fieldTextColor color-10}};
+        {{style.textFont Body-M}};
+      }
+
+      .name-input::-moz-input-placeholder,
+      .phone-number-input::-moz-input-placeholder,
+      .email-input[type=email]:-moz-input-placeholder {
+        color: {{style.fieldTextColor color-10}};
+        {{style.textFont Body-M}};
+      }
+
+      .title-row {
+        color: {{style.titleColor color-9}};
+        {{style.titleFont Body-L}};
+      }
+
+      .subtitle-row {
+        color: {{style.subtitleColor color-9}};
+        {{style.subtitleFont Body-L}};
+
+      }
+      .classic .subscribe-button,
+      .strip .subscribe-button,
+      .postcard .subscribe-button,
+      .elegant .subscribe-button,
+      .headline .subscribe-button,
+      .classic .success-back-to-editor,
+      .strip .success-back-to-editor,
+      .postcard .success-back-to-editor,
+      .elegant .success-back-to-editor,
+      .headline .success-back-to-editor {
+        background-color: {{style.buttonColor color-8}} !important;
+        border-color: {{style.buttonBorderColor color-8}};
+        border-width: {{(style.buttonBorderWidth >= 0) ? style.buttonBorderWidth : style.linesSlider}}px;
+        color: {{style.buttonTextColor}};
+        {{style.buttonFont Body-M}};
+      }
+
+      .app-container.in-popup {
+        background-color: {{style.popupBackground color-1}};
+      }
+
+      .upgrade-app-text {
+        {{style.titleFont Body-M}};
+        color: {{style.titleColor}};
+      }
+
+      .success-view-title {
+        color: {{style.titleColor color-9}};
+        {{style.titleFont Body-L}};
+      }
+
+      .success-view-subtitle {
+        color: {{style.titleColor color-9}};
+        {{style.subtitleFont Body-L}};
+      }
+
+      .close-popup {
+        color: {{style.popupCloseColor color-8}};
+        text-shadow: {{style.titleColor color-9}};
+      }
+
+    </style>
+
+    
+    <!-- MixPanel Analytics -->
+    <script type="text/javascript">
+        (function (e, b) {
+            if (!b.__SV) {
+                var a, f, i, g;
+                window.mixpanel = b;
+                b._i = [];
+                b.init = function (a, e, d) {
+                    function f(b, h) {
+                        var a = h.split(".");
+                        2 == a.length && (b = b[a[0]], h = a[1]);
+                        b[h] = function () {
+                            b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    }
+
+                    var c = b;
+                    "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+                    c.people = c.people || [];
+                    c.toString = function (b) {
+                        var a = "mixpanel";
+                        "mixpanel" !== d && (a += "." + d);
+                        b || (a += " (stub)");
+                        return a
+                    };
+                    c.people.toString = function () {
+                        return c.toString(1) + ".people (stub)"
+                    };
+                    i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+                    for (g = 0; g < i.length; g++)f(c, i[g]);
+                    b._i.push([a, e, d])
+                };
+                b.__SV = 1.2;
+                a = e.createElement("script");
+                a.type = "text/javascript";
+                a.async = !0;
+                a.src = ("https:" === e.location.protocol ? "https:" : "http:") + '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';
+                f = e.getElementsByTagName("script")[0];
+                f.parentNode.insertBefore(a, f)
+            }
+        })(document, window.mixpanel || []);
+        mixpanel.init("b8f279f309ff018a6cf07375fe4e59aa", {cross_subdomain_cookie: false, persistence: 'localStorage', persistence_name: 'gs', cookie_expiration: 10});
+    </script>
+  </head>
+  <body resize>
+    <script type="text/javascript" src="//static.parastorage.com/services/js-sdk/1.72.0/js/wix.min.js"></script>
+    <script>
+      window.apiUrl = '/_api/shoutout-get-subscriber-server-webapp';
+      window.metasiteId = 'c99a7287-9b4a-4927-9f00-784cb9fae79a';
+      window.defaultLocale = 'en';
+      window.ownerId = 'a586397a-5ca6-4f70-8a5d-18624f190695';
+    </script>
+    <div class="container">
+      <get-subscribers></get-subscribers>
+    </div>
+
+    <script src="//static.parastorage.com/services/third-party/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//static.parastorage.com/services/third-party/angularjs/1.4.9/angular.min.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/angular-translate/angular-translate.js"></script>
+    <script src="//static.parastorage.com/services/third-party/angularjs/1.4.9/i18n/angular-locale_en.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/wix-angular/dist/wix-angular.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <!--  -->
+<script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/scripts/locale/messages_en.js"></script>
+<!--  -->
+    <!--  -->
+<script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/scripts/modules.js"></script>
+<!--  -->
+    <!--  -->
+<script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/scripts/scripts.js"></script>
+<!--  -->
+
+    <!--  -->
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/modules/widget/main.html.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/modules/widget/success-view.html.js"></script>
+    <script src="//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/modules/widget/upgrade-view.html.js"></script>
+
+    <script>
+    angular.module('shoutoutGetSubscriberApp').requires.push('shoutoutGetSubscriberPreload');
+    angular.module('shoutoutGetSubscriberApp').requires.push('pascalprecht.translate');
+    angular.module('shoutoutGetSubscriberApp')
+      .config(function (wixAngularTopologyProvider, experimentManagerProvider, $translateProvider) {
+        wixAngularTopologyProvider.setStaticsUrl('//static.parastorage.com/services/shoutout-get-subscriber/1.112.0/');
+        experimentManagerProvider.setExperiments(JSON.parse('{}'));
+        var languagePath = wixAngularTopologyProvider.getStaticsUrl() +
+            'scripts/locale/get-subscribers/messages_';
+        $translateProvider.useSanitizeValueStrategy(null);
+        $translateProvider.useStaticFilesLoader({
+              prefix: languagePath,
+              suffix: '.json'
+            });
+      });
+    </script>
+
+    
+
+  </body>
+</html>
